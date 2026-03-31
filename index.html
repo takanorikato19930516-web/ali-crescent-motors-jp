@@ -91,6 +91,31 @@
             border-radius: 6px;
             font-weight: 600 !important;
         }
+        .lang-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            background: var(--navy);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid rgba(245, 197, 24, 0.3);
+            cursor: pointer;
+            margin-left: 16px;
+        }
+        .lang-btn {
+            padding: 8px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--gray);
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .lang-btn.active {
+            background: var(--gold);
+            color: var(--dark-navy);
+        }
 
         /* Hero */
         .hero {
@@ -546,26 +571,30 @@
             <div class="logo-text">Ali Crescent <span>Motors</span></div>
         </div>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#license">License</a></li>
-            <li><a href="#how-it-works">How It Works</a></li>
-            <li><a href="#vehicles">Vehicles</a></li>
-            <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+            <li><a href="#about" data-lang-en="About" data-lang-bn="আমাদের সম্পর্কে">About</a></li>
+            <li><a href="#license" data-lang-en="License" data-lang-bn="লাইসেন্স">License</a></li>
+            <li><a href="#how-it-works" data-lang-en="How It Works" data-lang-bn="কিভাবে কাজ করে">How It Works</a></li>
+            <li><a href="#vehicles" data-lang-en="Vehicles" data-lang-bn="গাড়ি">Vehicles</a></li>
+            <li><a href="#contact" class="nav-cta" data-lang-en="Contact Us" data-lang-bn="যোগাযোগ">Contact Us</a></li>
         </ul>
+        <div class="lang-toggle">
+            <button class="lang-btn active" id="btn-en" onclick="switchLang('en')">EN</button>
+            <button class="lang-btn" id="btn-bn" onclick="switchLang('bn')">BN</button>
+        </div>
     </nav>
 
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">LICENSED JAPAN AUCTION AGENT</div>
-            <h1>Direct from <span>Japan Auctions</span> to Bangladesh</h1>
-            <p>Ali Crescent Motors is a licensed Japanese auction agent with operations in both Japan and Bangladesh. We source quality vehicles directly from Japan's top auctions — no middlemen, no markup.</p>
+            <div class="hero-badge" data-lang-en="LICENSED JAPAN AUCTION AGENT" data-lang-bn="লাইসেন্সধারী জাপান অকশন এজেন্ট">LICENSED JAPAN AUCTION AGENT</div>
+            <h1 data-lang-en="Direct from <span>Japan Auctions</span> to Bangladesh" data-lang-bn="সরাসরি <span>জাপান অকশন</span> থেকে বাংলাদেশে">Direct from <span>Japan Auctions</span> to Bangladesh</h1>
+            <p data-lang-en="Ali Crescent Motors is a licensed Japanese auction agent with operations in both Japan and Bangladesh. We source quality vehicles directly from Japan's top auctions — no middlemen, no markup." data-lang-bn="আলী ক্রিসেন্ট মোটরস জাপান ও বাংলাদেশ উভয় দেশে কার্যক্রম পরিচালনাকারী একটি লাইসেন্সধারী জাপানি অকশন এজেন্ট। আমরা সরাসরি জাপানের শীর্ষ অকশন থেকে মানসম্পন্ন গাড়ি সংগ্রহ করি — কোনো মধ্যস্বত্বভোগী নেই, কোনো অতিরিক্ত মূল্য নেই।">Ali Crescent Motors is a licensed Japanese auction agent with operations in both Japan and Bangladesh. We source quality vehicles directly from Japan's top auctions — no middlemen, no markup.</p>
             <div class="hero-buttons">
                 <a href="#" class="btn-primary">
                     <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.68-1.318A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.143 0-4.144-.612-5.862-1.7l-.41-.262-3.098.872.812-3.21-.262-.41A9.955 9.955 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
-                    Chat on WhatsApp
+                    <span data-lang-en="Chat on WhatsApp" data-lang-bn="WhatsApp-এ চ্যাট করুন">Chat on WhatsApp</span>
                 </a>
-                <a href="#how-it-works" class="btn-secondary">How It Works &#8595;</a>
+                <a href="#how-it-works" class="btn-secondary" data-lang-en="How It Works ↓" data-lang-bn="কিভাবে কাজ করে ↓">How It Works &#8595;</a>
             </div>
         </div>
         <div class="hero-image">
@@ -577,43 +606,43 @@
     <section class="stats">
         <div class="stat-item">
             <div class="stat-number">500+</div>
-            <div class="stat-label">Vehicles Exported</div>
+            <div class="stat-label" data-lang-en="Vehicles Exported" data-lang-bn="রপ্তানিকৃত গাড়ি">Vehicles Exported</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">2</div>
-            <div class="stat-label">Offices (Japan & Bangladesh)</div>
+            <div class="stat-label" data-lang-en="Offices (Japan & Bangladesh)" data-lang-bn="অফিস (জাপান ও বাংলাদেশ)">Offices (Japan & Bangladesh)</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">50+</div>
-            <div class="stat-label">Auction Houses Access</div>
+            <div class="stat-label" data-lang-en="Auction Houses Access" data-lang-bn="অকশন হাউসে প্রবেশাধিকার">Auction Houses Access</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">0</div>
-            <div class="stat-label">Middlemen</div>
+            <div class="stat-label" data-lang-en="Middlemen" data-lang-bn="মধ্যস্বত্বভোগী">Middlemen</div>
         </div>
     </section>
 
     <!-- About -->
     <section class="about" id="about">
         <div class="section-header">
-            <div class="section-tag">Why Choose Us</div>
-            <h2 class="section-title">Japan & Bangladesh, Connected.</h2>
+            <div class="section-tag" data-lang-en="Why Choose Us" data-lang-bn="কেন আমাদের বেছে নেবেন">Why Choose Us</div>
+            <h2 class="section-title" data-lang-en="Japan & Bangladesh, Connected." data-lang-bn="জাপান ও বাংলাদেশ, সংযুক্ত।">Japan & Bangladesh, Connected.</h2>
         </div>
         <div class="about-grid">
             <div class="about-card">
                 <div class="about-card-icon">🏢</div>
-                <h3>Dual Operations</h3>
-                <p>Ali Crescent Japan sources vehicles directly from auctions. Ali Crescent Bangladesh handles import, customs clearance, and local delivery — all in-house.</p>
+                <h3 data-lang-en="Dual Operations" data-lang-bn="দ্বৈত কার্যক্রম">Dual Operations</h3>
+                <p data-lang-en="Ali Crescent Japan sources vehicles directly from auctions. Ali Crescent Bangladesh handles import, customs clearance, and local delivery — all in-house." data-lang-bn="আলী ক্রিসেন্ট জাপান সরাসরি অকশন থেকে গাড়ি সংগ্রহ করে। আলী ক্রিসেন্ট বাংলাদেশ আমদানি, কাস্টমস ক্লিয়ারেন্স এবং স্থানীয় ডেলিভারি পরিচালনা করে — সবকিছু নিজস্ব ব্যবস্থাপনায়।">Ali Crescent Japan sources vehicles directly from auctions. Ali Crescent Bangladesh handles import, customs clearance, and local delivery — all in-house.</p>
             </div>
             <div class="about-card">
                 <div class="about-card-icon">💰</div>
-                <h3>No Middlemen</h3>
-                <p>Because we operate on both ends, there are no brokers or agents taking a cut. You get the best auction price with transparent fees.</p>
+                <h3 data-lang-en="No Middlemen" data-lang-bn="কোনো মধ্যস্বত্বভোগী নেই">No Middlemen</h3>
+                <p data-lang-en="Because we operate on both ends, there are no brokers or agents taking a cut. You get the best auction price with transparent fees." data-lang-bn="যেহেতু আমরা উভয় প্রান্তে কাজ করি, তাই কোনো দালাল বা এজেন্ট কমিশন নেয় না। আপনি স্বচ্ছ ফি সহ সেরা অকশন মূল্য পাবেন।">Because we operate on both ends, there are no brokers or agents taking a cut. You get the best auction price with transparent fees.</p>
             </div>
             <div class="about-card">
                 <div class="about-card-icon">🔍</div>
-                <h3>Order-Based Sourcing</h3>
-                <p>We don't push stock. You tell us what you need — make, model, year, budget — and we find the best match at auction.</p>
+                <h3 data-lang-en="Order-Based Sourcing" data-lang-bn="অর্ডার ভিত্তিক সংগ্রহ">Order-Based Sourcing</h3>
+                <p data-lang-en="We don't push stock. You tell us what you need — make, model, year, budget — and we find the best match at auction." data-lang-bn="আমরা স্টক চাপিয়ে দিই না। আপনি আমাদের জানান কী দরকার — মেক, মডেল, সাল, বাজেট — এবং আমরা অকশনে সেরা ম্যাচ খুঁজে দিই।">We don't push stock. You tell us what you need — make, model, year, budget — and we find the best match at auction.</p>
             </div>
         </div>
     </section>
@@ -623,16 +652,16 @@
         <div class="license-inner">
             <div class="license-badge">
                 <div class="icon">🛡️</div>
-                <div class="label">LICENSED<br>& VERIFIED</div>
+                <div class="label" data-lang-en="LICENSED<br>& VERIFIED" data-lang-bn="লাইসেন্সধারী<br>ও যাচাইকৃত">LICENSED<br>& VERIFIED</div>
             </div>
             <div class="license-text">
-                <h3>Fully Licensed in Japan</h3>
-                <p>Ali Crescent Japan holds all required licenses to operate as a used vehicle dealer and auction agent in Japan.</p>
+                <h3 data-lang-en="Fully Licensed in Japan" data-lang-bn="জাপানে সম্পূর্ণ লাইসেন্সধারী">Fully Licensed in Japan</h3>
+                <p data-lang-en="Ali Crescent Japan holds all required licenses to operate as a used vehicle dealer and auction agent in Japan." data-lang-bn="আলী ক্রিসেন্ট জাপান, জাপানে একটি সেকেন্ড-হ্যান্ড গাড়ি বিক্রেতা ও অকশন এজেন্ট হিসেবে কার্যক্রম পরিচালনার জন্য সকল প্রয়োজনীয় লাইসেন্স ধারণ করে।">Ali Crescent Japan holds all required licenses to operate as a used vehicle dealer and auction agent in Japan.</p>
                 <ul class="license-list">
-                    <li><span class="check">✓</span> Kobutsusho (古物商) — Used Goods Dealer License</li>
-                    <li><span class="check">✓</span> Registered member of major Japanese auto auctions</li>
-                    <li><span class="check">✓</span> Ali Crescent Bangladesh — Local entity for import & delivery</li>
-                    <li><span class="check">✓</span> Full export documentation support (EPC, BL, Insurance)</li>
+                    <li><span class="check">✓</span> <span data-lang-en="Kobutsusho (古物商) — Used Goods Dealer License" data-lang-bn="কোবুৎসুশো (古物商) — সেকেন্ড-হ্যান্ড পণ্য বিক্রেতার লাইসেন্স">Kobutsusho (古物商) — Used Goods Dealer License</span></li>
+                    <li><span class="check">✓</span> <span data-lang-en="Registered member of major Japanese auto auctions" data-lang-bn="জাপানের প্রধান অটো অকশনগুলোর নিবন্ধিত সদস্য">Registered member of major Japanese auto auctions</span></li>
+                    <li><span class="check">✓</span> <span data-lang-en="Ali Crescent Bangladesh — Local entity for import & delivery" data-lang-bn="আলী ক্রিসেন্ট বাংলাদেশ — আমদানি ও ডেলিভারির জন্য স্থানীয় প্রতিষ্ঠান">Ali Crescent Bangladesh — Local entity for import & delivery</span></li>
+                    <li><span class="check">✓</span> <span data-lang-en="Full export documentation support (EPC, BL, Insurance)" data-lang-bn="সম্পূর্ণ রপ্তানি ডকুমেন্টেশন সাপোর্ট (EPC, BL, বীমা)">Full export documentation support (EPC, BL, Insurance)</span></li>
                 </ul>
             </div>
         </div>
@@ -641,38 +670,38 @@
     <!-- How It Works -->
     <section class="how-it-works" id="how-it-works">
         <div class="section-header">
-            <div class="section-tag">Process</div>
-            <h2 class="section-title">How It Works</h2>
+            <div class="section-tag" data-lang-en="Process" data-lang-bn="প্রক্রিয়া">Process</div>
+            <h2 class="section-title" data-lang-en="How It Works" data-lang-bn="কিভাবে কাজ করে">How It Works</h2>
         </div>
         <div class="steps">
             <div class="step">
                 <div class="step-number">1</div>
-                <h3>Tell Us What You Need</h3>
-                <p>Contact us via WhatsApp with your desired make, model, year, and budget.</p>
+                <h3 data-lang-en="Tell Us What You Need" data-lang-bn="আপনার চাহিদা জানান">Tell Us What You Need</h3>
+                <p data-lang-en="Contact us via WhatsApp with your desired make, model, year, and budget." data-lang-bn="WhatsApp-এ আমাদের সাথে যোগাযোগ করুন — আপনার পছন্দের মেক, মডেল, সাল এবং বাজেট জানান।">Contact us via WhatsApp with your desired make, model, year, and budget.</p>
                 <span class="step-arrow">→</span>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h3>We Find the Best Match</h3>
-                <p>We search upcoming auctions and send you options with full inspection details.</p>
+                <h3 data-lang-en="We Find the Best Match" data-lang-bn="আমরা সেরা ম্যাচ খুঁজি">We Find the Best Match</h3>
+                <p data-lang-en="We search upcoming auctions and send you options with full inspection details." data-lang-bn="আমরা আসন্ন অকশনগুলো খুঁজি এবং সম্পূর্ণ পরিদর্শন বিবরণসহ আপনাকে অপশন পাঠাই।">We search upcoming auctions and send you options with full inspection details.</p>
                 <span class="step-arrow">→</span>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h3>Deposit & Bid</h3>
-                <p>Once you approve, pay a deposit (payment method to be discussed). We bid on your behalf at auction.</p>
+                <h3 data-lang-en="Deposit & Bid" data-lang-bn="আমানত ও বিড">Deposit & Bid</h3>
+                <p data-lang-en="Once you approve, pay a deposit (payment method to be discussed). We bid on your behalf at auction." data-lang-bn="আপনি অনুমোদন করলে, আমানত প্রদান করুন (পেমেন্ট পদ্ধতি আলোচনা সাপেক্ষে)। আমরা আপনার পক্ষে অকশনে বিড করি।">Once you approve, pay a deposit (payment method to be discussed). We bid on your behalf at auction.</p>
                 <span class="step-arrow">→</span>
             </div>
             <div class="step">
                 <div class="step-number">4</div>
-                <h3>Shipping & Customs</h3>
-                <p>Vehicle is shipped to Chittagong/Mongla port. Our Bangladesh team handles customs.</p>
+                <h3 data-lang-en="Shipping & Customs" data-lang-bn="শিপিং ও কাস্টমস">Shipping & Customs</h3>
+                <p data-lang-en="Vehicle is shipped to Chittagong/Mongla port. Our Bangladesh team handles customs." data-lang-bn="গাড়িটি চট্টগ্রাম/মংলা বন্দরে পাঠানো হয়। আমাদের বাংলাদেশ টিম কাস্টমস পরিচালনা করে।">Vehicle is shipped to Chittagong/Mongla port. Our Bangladesh team handles customs.</p>
                 <span class="step-arrow">→</span>
             </div>
             <div class="step">
                 <div class="step-number">5</div>
-                <h3>Delivery</h3>
-                <p>Your vehicle is cleared and delivered. Full support from start to finish.</p>
+                <h3 data-lang-en="Delivery" data-lang-bn="ডেলিভারি">Delivery</h3>
+                <p data-lang-en="Your vehicle is cleared and delivered. Full support from start to finish." data-lang-bn="আপনার গাড়ি ক্লিয়ার করে ডেলিভারি দেওয়া হয়। শুরু থেকে শেষ পর্যন্ত সম্পূর্ণ সাপোর্ট।">Your vehicle is cleared and delivered. Full support from start to finish.</p>
             </div>
         </div>
     </section>
@@ -680,9 +709,9 @@
     <!-- Recent Exports -->
     <section class="exports" id="vehicles">
         <div class="section-header">
-            <div class="section-tag">Our Vehicles</div>
-            <h2 class="section-title">Latest from Instagram</h2>
-            <p style="color: var(--gray); margin-top: 12px; font-size: 15px;">Follow <a href="https://www.instagram.com/AliCrescentMotors/" target="_blank" style="color: var(--gold); text-decoration: none; font-weight: 600;">@AliCrescentMotors</a> for the latest vehicles and updates</p>
+            <div class="section-tag" data-lang-en="Our Vehicles" data-lang-bn="আমাদের গাড়ি">Our Vehicles</div>
+            <h2 class="section-title" data-lang-en="Latest from Instagram" data-lang-bn="ইনস্টাগ্রাম থেকে সর্বশেষ">Latest from Instagram</h2>
+            <p style="color: var(--gray); margin-top: 12px; font-size: 15px;" data-lang-en="Follow <a href='https://www.instagram.com/AliCrescentMotors/' target='_blank' style='color: var(--gold); text-decoration: none; font-weight: 600;'>@AliCrescentMotors</a> for the latest vehicles and updates" data-lang-bn="সর্বশেষ গাড়ি ও আপডেটের জন্য ফলো করুন <a href='https://www.instagram.com/AliCrescentMotors/' target='_blank' style='color: var(--gold); text-decoration: none; font-weight: 600;'>@AliCrescentMotors</a>">Follow <a href="https://www.instagram.com/AliCrescentMotors/" target="_blank" style="color: var(--gold); text-decoration: none; font-weight: 600;">@AliCrescentMotors</a> for the latest vehicles and updates</p>
         </div>
         <div style="max-width: 1100px; margin: 0 auto;">
             <!-- Elfsight Instagram Feed | Untitled Instagram Feed -->
@@ -691,7 +720,7 @@
             <!-- Fallback: Instagram link -->
             <div style="text-align: center; margin-top: 24px;">
                 <a href="https://www.instagram.com/AliCrescentMotors/" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #fff; padding: 14px 32px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 16px; transition: transform 0.3s;">
-                    View All on Instagram
+                    <span data-lang-en="View All on Instagram" data-lang-bn="ইনস্টাগ্রামে সব দেখুন">View All on Instagram</span>
                 </a>
             </div>
         </div>
@@ -700,24 +729,24 @@
     <!-- CTA -->
     <section class="cta" id="contact">
         <img src="logo-dark.png" alt="Ali Crescent Logo" style="width: 180px; margin-bottom: 24px; mix-blend-mode: multiply;">
-        <h2>Ready to Source Your Next Vehicle?</h2>
-        <p>Contact us on WhatsApp. Tell us what you're looking for and we'll get started.</p>
+        <h2 data-lang-en="Ready to Source Your Next Vehicle?" data-lang-bn="আপনার পরবর্তী গাড়ি সংগ্রহ করতে প্রস্তুত?">Ready to Source Your Next Vehicle?</h2>
+        <p data-lang-en="Contact us on WhatsApp. Tell us what you're looking for and we'll get started." data-lang-bn="WhatsApp-এ আমাদের সাথে যোগাযোগ করুন। আপনি কী খুঁজছেন জানান এবং আমরা শুরু করি।">Contact us on WhatsApp. Tell us what you're looking for and we'll get started.</p>
         <a href="#" class="btn-cta">
             <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.68-1.318A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.143 0-4.144-.612-5.862-1.7l-.41-.262-3.098.872.812-3.21-.262-.41A9.955 9.955 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
-            Start a Conversation on WhatsApp
+            <span data-lang-en="Start a Conversation on WhatsApp" data-lang-bn="WhatsApp-এ কথা বলুন">Start a Conversation on WhatsApp</span>
         </a>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-links">
-            <a href="#about">About</a>
-            <a href="#license">License</a>
-            <a href="#how-it-works">How It Works</a>
-            <a href="#vehicles">Vehicles</a>
-            <a href="https://ali-crescent.co.jp/" target="_blank">Ali Crescent Japan (Corporate)</a>
+            <a href="#about" data-lang-en="About" data-lang-bn="আমাদের সম্পর্কে">About</a>
+            <a href="#license" data-lang-en="License" data-lang-bn="লাইসেন্স">License</a>
+            <a href="#how-it-works" data-lang-en="How It Works" data-lang-bn="কিভাবে কাজ করে">How It Works</a>
+            <a href="#vehicles" data-lang-en="Vehicles" data-lang-bn="গাড়ি">Vehicles</a>
+            <a href="https://ali-crescent.co.jp/" target="_blank" data-lang-en="Ali Crescent Japan (Corporate)" data-lang-bn="আলী ক্রিসেন্ট জাপান (কর্পোরেট)">Ali Crescent Japan (Corporate)</a>
         </div>
-        <p>&copy; 2026 Ali Crescent Motors. All rights reserved.</p>
+        <p data-lang-en="&copy; 2026 Ali Crescent Motors. All rights reserved." data-lang-bn="&copy; ২০২৬ আলী ক্রিসেন্ট মোটরস। সর্বস্বত্ব সংরক্ষিত।">&copy; 2026 Ali Crescent Motors. All rights reserved.</p>
     </footer>
 
     <!-- WhatsApp Floating Button -->
@@ -725,5 +754,15 @@
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.68-1.318A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.143 0-4.144-.612-5.862-1.7l-.41-.262-3.098.872.812-3.21-.262-.41A9.955 9.955 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
     </a>
 
+    <script>
+    function switchLang(lang) {
+        document.querySelectorAll('[data-lang-en]').forEach(function(el) {
+            var text = el.getAttribute('data-lang-' + lang);
+            if (text) el.innerHTML = text;
+        });
+        document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+        document.getElementById('btn-bn').classList.toggle('active', lang === 'bn');
+    }
+    </script>
 </body>
 </html>
