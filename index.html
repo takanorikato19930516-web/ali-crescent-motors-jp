@@ -123,6 +123,7 @@
             background: linear-gradient(135deg, var(--dark-navy) 0%, var(--navy) 100%);
             display: flex;
             align-items: center;
+            justify-content: center;
             padding: 120px 60px 80px;
             position: relative;
             overflow: hidden;
@@ -137,9 +138,18 @@
             background: radial-gradient(circle, rgba(245, 197, 24, 0.08) 0%, transparent 70%);
             border-radius: 50%;
         }
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            max-width: 1200px;
+            width: 100%;
+            z-index: 1;
+        }
         .hero-content {
             max-width: 650px;
-            z-index: 1;
+            flex-shrink: 0;
         }
         .hero-badge {
             display: inline-block;
@@ -205,14 +215,14 @@
         .btn-secondary:hover { border-color: var(--gold); }
 
         .hero-image {
-            position: absolute;
-            right: 5%;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 1;
+            flex-shrink: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .hero-logo-img {
-            width: 400px;
+            width: 100%;
+            max-width: 400px;
             height: auto;
             mix-blend-mode: lighten;
         }
@@ -616,6 +626,7 @@
             nav ul { display: none; }
             .hero { padding: 100px 20px 60px; }
             .hero h1 { font-size: 32px; }
+            .hero-inner { flex-direction: column; gap: 32px; }
             .hero-image { display: none; }
             .stats { flex-wrap: wrap; gap: 32px; padding: 32px 20px; }
             .about, .license, .how-it-works, .exports, .offices, .cta { padding: 60px 20px; }
@@ -649,6 +660,7 @@
 
     <!-- Hero -->
     <section class="hero">
+        <div class="hero-inner">
         <div class="hero-content">
             <div class="hero-badge" data-lang-en="LICENSED JAPAN AUCTION AGENT" data-lang-bn="লাইসেন্সধারী জাপান অকশন এজেন্ট">LICENSED JAPAN AUCTION AGENT</div>
             <h1 data-lang-en="Direct from <span>Japan Auctions</span> to Bangladesh" data-lang-bn="সরাসরি <span>জাপান অকশন</span> থেকে বাংলাদেশে">Direct from <span>Japan Auctions</span> to Bangladesh</h1>
@@ -663,6 +675,7 @@
         </div>
         <div class="hero-image">
             <img class="hero-logo-img" src="logo-dark.png" alt="Ali Crescent Motors">
+        </div>
         </div>
     </section>
 
